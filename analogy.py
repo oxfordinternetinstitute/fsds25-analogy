@@ -127,9 +127,7 @@ Examples:
     args = parser.parse_args()
     
     # Load model
-    print("="*70)
     print("Word2Vec Analogy Testing Tool")
-    print("="*70)
     
     try:
         manager = ModelManager()
@@ -143,9 +141,7 @@ Examples:
         else:
             print("\nLoading Word2Vec model...")
             model = manager.load_word2vec_google_news()
-        
-        print("\n" + "="*70)
-        
+                
         # Execute requested operation
         if args.test:
             # Test specific analogy
@@ -175,9 +171,8 @@ Examples:
             results = run_analogy_test_suite(model)
             print_test_summary(results)
         
-        print("\n" + "="*70)
         print("Analysis complete!")
-        print("="*70)
+        
         
         return 0
         
